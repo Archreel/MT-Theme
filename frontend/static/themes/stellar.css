@@ -1,0 +1,93 @@
+:root {
+  --bg-color: #212123;
+  --main-color: #80afdd;
+  --caret-color: #ea9552;
+  --sub-color: #7fa6c3;
+  --sub-alt-color: #e3d3c6;
+  --text-color: #c7d2d4;
+  --error-color: #943f54;
+  --error-extra-color: #1a459c
+  --colorful-error-color: #943f54;
+  --colorful-error-extra-color: #1a459c;
+}
+
+/* hide buttons while typing */
+header.focus nav .textButton {
+  background: none;
+}
+
+nav > .textButton:nth-child(1) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Cpath d='M0,78 a65,25 0 1 1 102.5,45' stroke='white' stroke-width='2' fill='transparent' transform='rotate(45,100,100)' /%3E%3Ccircle cx='65' cy='65' r='45' fill='%2380AFDD%0A' /%3E%3Cpath d='M0,78 a65,25 0 1 0 102.5,45' stroke='white' stroke-width='2' fill='transparent' transform='rotate(45,100,100)' /%3E%3C/svg%3E");
+    color: var(--bg-color);
+    
+    
+ 
+    
+}
+nav > .textButton:nth-child(2) {
+  background: #ea9552;
+  color: var(--bg-color);
+  border-radius: calc(var(--roundness) * 1.65) calc(var(--roundness) * 1.65)
+    calc(var(--roundness) * 1.65) calc(var(--roundness) * 1.65);
+  transform: rotateY(9deg);
+}
+nav .textButton:nth-child(3) {
+  background: var(--main-color);
+  color: var(--bg-color);
+  border-radius: calc(var(--roundness) * 2.8) calc(var(--roundness) * 0.6)
+    calc(var(--roundness) * 2) calc(var(--roundness) * 1.6);
+  transform: rotateY(-3deg);
+}
+nav .textButton:nth-child(4) {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-radius: calc(var(--roundness) * 0.8) calc(var(--roundness) * 2.4)
+    calc(var(--roundness) * 0.8) calc(var(--roundness) * 2.8);
+}
+
+nav .textButton:nth-child(1):hover,
+nav .textButton:nth-child(2):hover,
+nav .textButton:nth-child(3):hover,
+nav .textButton:nth-child(4):hover {
+  opacity: 0.8;
+}
+
+body.crtmode nav .textButton:nth-child(1) {
+  box-shadow: 3px 0 1px color-mix(in srgb, var(--sub-color) 20%, transparent),
+    -3px 0 color-mix(in srgb, var(--sub-color) 30%, transparent), 0 0 3px;
+}
+body.crtmode nav .textButton:nth-child(2) {
+  box-shadow: 3px 0 1px color-mix(in srgb, #9a7a61 20%, transparent),
+    -3px 0 color-mix(in srgb, #9a7a61 30%, transparent), 0 0 3px;
+}
+body.crtmode nav .textButton:nth-child(3) {
+  box-shadow: 3px 0 1px color-mix(in srgb, var(--main-color) 20%, transparent),
+    -3px 0 color-mix(in srgb, var(--main-color) 30%, transparent), 0 0 3px;
+}
+body.crtmode nav .textButton:nth-child(4) {
+  box-shadow: 3px 0 1px color-mix(in srgb, var(--text-color) 20%, transparent),
+    -3px 0 color-mix(in srgb, var(--text-color) 30%, transparent), 0 0 3px;
+}
+body.crtmode header.focus nav .textButton {
+  box-shadow: none;
+}
+
+/* color individual parts of the mt logo */
+#logo .icon svg path:nth-child(4),
+#logo .icon svg path:nth-child(8) {
+  fill: var(--text-color);
+}
+#logo .icon svg path:nth-child(1),
+#logo .icon svg path:nth-child(6),
+#logo .icon svg path:nth-child(7) {
+  fill: var(--sub-color);
+}
+#logo .icon svg path:nth-child(3),
+#logo .icon svg path:nth-child(4),
+#logo .icon svg path:nth-child(5) {
+  fill: var(--main-color);
+}
+
+#logo .icon svg path:nth-child(9) {
+  fill: #e3d3c6;
+}
